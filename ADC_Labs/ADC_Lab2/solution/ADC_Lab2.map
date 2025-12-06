@@ -1,0 +1,204 @@
+HI-TECH Software C Compiler 
+
+Linker command line:
+
+--edf=C:\Program Files\HI-TECH Software\PICC\LITE\9.60\dat\en_msgs.txt \
+  -h+ADC_Lab2.sym -z -Q16F690 -ol.obj -MADC_Lab2.map -E1 -ACODE=00h-07FFh \
+  -ACONST=00h-0FFhx8 -AENTRY=00h-0FFhx8 -ASTRING=00h-0FFhx8 \
+  -ABANK0=020h-07Fh -ABANK1=0A0h-0EFh -ACOMBANK=070h-07Fh \
+  -preset_vec=00h,intentry,intcode,intret,init,end_init,clrtext,maintext,stringtable,pstrings,strings \
+  -ppowerup=CODE -ptemp=-COMBANK -pintsave_0=-COMBANK \
+  -prbit_0=BANK0,rbss_0=BANK0,rdata_0=BANK0,idata_0=CODE -pnvram=BANK0 \
+  -pintsave_1=BANK1 -prbit_1=BANK1,rbss_1=BANK1,rdata_1=BANK1,idata_1=CODE \
+  -pnvram_1=BANK1,nvbit_1=BANK1 -ACONFIG=02007h-02007h -pconfig=CONFIG \
+  -AIDLOC=02000h-02003h -pidloc=IDLOC -AEEDATA=00h-0FFh/02100h \
+  -peeprom_data=EEDATA -pfloat_text0=CODE,float_text1=CODE,float_text2=CODE \
+  -pfloat_text3=CODE,float_text4=CODE \
+  C:\DOCUME~1\c13137\LOCALS~1\Temp\s4ss.obj ADC_Lab2.obj \
+  C:\Program Files\HI-TECH Software\PICC\LITE\9.60\lib\pcl32--u.lib \
+  C:\Program Files\HI-TECH Software\PICC\LITE\9.60\lib\pcl40c-c.lib \
+  C:\Program Files\HI-TECH Software\PICC\LITE\9.60\lib\pcl32--u.lib 
+
+Object code version is 3.10
+
+Machine type is 16F690
+
+Call graph:
+
+*_main size 0,0 offset 0
+     _Initialize size 0,0 offset 0
+*    _Get_Inputs size 0,1 offset 0
+     _Decide size 0,0 offset 0
+     _Do_Outputs size 0,0 offset 0
+     _Timing size 0,0 offset 0
+
+Estimated maximum call depth: 1
+
+
+		Name          Link     Load   Length Selector Space Scale
+C:\DOCUME~1\c13137\LOCALS~1\Temp\s4ss.obj
+		init             0        0        4       0     0
+		end_init         4        4        9       0     0
+ADC_Lab2.obj    config        2007     2007        1    400E     0
+		rbss_0          21       21        2      20     1
+		rbit_0         100       20        1      20     1    8
+		temp            7F       7F        1      7F     1
+		text6          7B3      7B3        8     F66     0
+		text5          7AC      7AC        7     F58     0
+		text4          7C4      7C4        D     F88     0
+		text0          7D1      7D1        D     FA2     0
+		text3          7BB      7BB        9     F76     0
+		text2          7DE      7DE       22     FBC     0
+		text1          7A6      7A6        6     F4C     0
+
+C:\Program Files\HI-TECH Software\PICC\LITE\9.60\lib\pcl32--u.lib
+
+C:\Program Files\HI-TECH Software\PICC\LITE\9.60\lib\pcl40c-c.lib
+btemp0.obj      temp            7F       7F        1      7F     1
+
+C:\Program Files\HI-TECH Software\PICC\LITE\9.60\lib\pcl32--u.lib
+
+COMMON          rbss_0          23       23        2      20     1
+
+TOTAL		Name          Link     Load   Length
+	CLASS	CODE     
+		init             0        0        4
+		end_init         4        4        9
+		text6          7B3      7B3        8
+		text5          7AC      7AC        7
+		text4          7C4      7C4        D
+		text0          7D1      7D1        D
+		text3          7BB      7BB        9
+		text2          7DE      7DE       22
+		text1          7A6      7A6        6
+
+	CLASS	CONST    
+
+	CLASS	ENTRY    
+
+	CLASS	STRING   
+
+	CLASS	BANK0    
+		rbss_0          21       21        4
+		rbit_0         100       20        1
+		temp            7F       7F        1
+
+	CLASS	BANK1    
+
+	CLASS	COMBANK  
+
+	CLASS	CONFIG   
+		config        2007     2007        1
+
+	CLASS	IDLOC    
+
+	CLASS	EEDATA   
+
+	CLASS	BANK3    
+
+	CLASS	BANK2    
+
+
+
+SEGMENTS	Name		Load	Length	 Top	Selector    Space Class
+
+		reset_vec       000000	00000D	00000D	       0       0  CODE    
+		rbit_0          000020	000005	000025	      20       1  BANK0   
+		temp            00007F	000001	000080	      7F       1  COMBANK 
+		text1           0007A6	000006	0007AC	     F4C       0  CODE    
+		text5           0007AC	000007	0007B3	     F58       0  CODE    
+		text6           0007B3	000008	0007BB	     F66       0  CODE    
+		text3           0007BB	000009	0007C4	     F76       0  CODE    
+		text4           0007C4	00000D	0007D1	     F88       0  CODE    
+		text0           0007D1	00000D	0007DE	     FA2       0  CODE    
+		text2           0007DE	000022	000800	     FBC       0  CODE    
+		config          002007	000001	002008	    400E       0  CONFIG  
+
+
+UNUSED ADDRESS RANGES
+
+	BANK0            0025-007E
+	BANK1            00A0-00EF
+	CODE             000D-07A5
+	COMBANK          0070-007E
+	CONST            000D-07A5
+	EEDATA           2100-21FF
+	ENTRY            000D-07A5
+	IDLOC            2000-2003
+	STRING           000D-07A5
+
+                                  Symbol Table
+
+?a_Delay_1mS   rbss_0      0023  ?a_Get_Inputs  rbss_0      0023
+_Decide        text4       07C4  _Delay_1mS     text0       07D1
+_Do_Outputs    text5       07AC  _Get_Inputs    text3       07BB
+_Initialize    text2       07DE  _LED_Output    rbss_0      0021
+_TMR0_preload  rbss_0      0022  _Timing        text6       07B3
+__Beeprom_data eeprom_data 2100  __Bnvbit_0     nvbit_0     001A
+__Bnvbit_1     nvbit_1     00A0  __Bnvbit_2     nvbit_2     001A
+__Bnvbit_3     nvbit_3     001A  __Bptbit_0     ptbit_0     001A
+__Brbit_0      rbit_0      0020  __Brbit_1      rbit_1      00A0
+__Brbit_2      rbit_2      001A  __Brbit_3      rbit_3      001A
+__Hclrtext     clrtext     000D  __Hcode        code        001A
+__Hcommon_ram  common_ram  001A  __Hconfig      config      2008
+__Heeprom_data eeprom_data 0000  __Hend_init    end_init    000D
+__Hfloat_text0 float_text0 000D  __Hfloat_text1 float_text1 000D
+__Hfloat_text2 float_text2 000D  __Hfloat_text3 float_text3 000D
+__Hfloat_text4 float_text4 000D  __Hidata_0     idata_0     000D
+__Hidata_1     idata_1     000D  __Hidata_2     idata_2     001A
+__Hidata_3     idata_3     001A  __Hidloc       idloc       2000
+__Hinit        init        0004  __Hinit23      init23      001A
+__Hintcode     intcode     0000  __Hintentry    intentry    0000
+__Hintret      intret      0000  __Hintsave     intsave     001A
+__Hintsave_0   intsave_0   0070  __Hintsave_1   intsave_1   00A0
+__Hintsave_2   intsave_2   001A  __Hintsave_3   intsave_3   001A
+__Hmaintext    maintext    000D  __Hnvbit_0     nvbit_0     00D0
+__Hnvbit_1     nvbit_1     0500  __Hnvbit_2     nvbit_2     00D0
+__Hnvbit_3     nvbit_3     00D0  __Hnvram       nvram       0025
+__Hnvram_1     nvram_1     00A0  __Hnvram_2     nvram_2     001A
+__Hnvram_3     nvram_3     001A  __Hpowerup     powerup     000D
+__Hpstrings    pstrings    000D  __Hptbit_0     ptbit_0     00D0
+__Hrbit_0      rbit_0      0101  __Hrbit_1      rbit_1      0500
+__Hrbit_2      rbit_2      00D0  __Hrbit_3      rbit_3      00D0
+__Hrbss_0      rbss_0      0025  __Hrbss_1      rbss_1      00A0
+__Hrbss_2      rbss_2      001A  __Hrbss_3      rbss_3      001A
+__Hrdata_0     rdata_0     0025  __Hrdata_1     rdata_1     00A0
+__Hrdata_2     rdata_2     001A  __Hrdata_3     rdata_3     001A
+__Hreset_vec   reset_vec   0000  __Hstrings     strings     000D
+__Hstringtable stringtable 000D  __Hstruct      struct      0025
+__Htemp        temp        0080  __Htext        text        001A
+__Lclrtext     clrtext     000D  __Lcode        code        001A
+__Lcommon_ram  common_ram  001A  __Lconfig      config      2007
+__Leeprom_data eeprom_data 0000  __Lend_init    end_init    0004
+__Lfloat_text0 float_text0 000D  __Lfloat_text1 float_text1 000D
+__Lfloat_text2 float_text2 000D  __Lfloat_text3 float_text3 000D
+__Lfloat_text4 float_text4 000D  __Lidata_0     idata_0     000D
+__Lidata_1     idata_1     000D  __Lidata_2     idata_2     001A
+__Lidata_3     idata_3     001A  __Lidloc       idloc       2000
+__Linit        init        0000  __Linit23      init23      001A
+__Lintcode     intcode     0000  __Lintentry    intentry    0000
+__Lintret      intret      0000  __Lintsave     intsave     001A
+__Lintsave_0   intsave_0   0070  __Lintsave_1   intsave_1   00A0
+__Lintsave_2   intsave_2   001A  __Lintsave_3   intsave_3   001A
+__Lmaintext    maintext    000D  __Lnvbit_0     nvbit_0     00D0
+__Lnvbit_1     nvbit_1     0500  __Lnvbit_2     nvbit_2     00D0
+__Lnvbit_3     nvbit_3     00D0  __Lnvram       nvram       0025
+__Lnvram_1     nvram_1     00A0  __Lnvram_2     nvram_2     001A
+__Lnvram_3     nvram_3     001A  __Lpowerup     powerup     000D
+__Lpstrings    pstrings    000D  __Lptbit_0     ptbit_0     00D0
+__Lrbit_0      rbit_0      0100  __Lrbit_1      rbit_1      0500
+__Lrbit_2      rbit_2      00D0  __Lrbit_3      rbit_3      00D0
+__Lrbss_0      rbss_0      0021  __Lrbss_1      rbss_1      00A0
+__Lrbss_2      rbss_2      001A  __Lrbss_3      rbss_3      001A
+__Lrdata_0     rdata_0     0025  __Lrdata_1     rdata_1     00A0
+__Lrdata_2     rdata_2     001A  __Lrdata_3     rdata_3     001A
+__Lreset_vec   reset_vec   0000  __Lstrings     strings     000D
+__Lstringtable stringtable 000D  __Lstruct      struct      0025
+__Ltemp        temp        007F  __Ltext        text        001A
+__S0           (abs)       2008  __S1           (abs)       00A0
+__S2           (abs)       2100  _exit          init        0000
+_main          text1       07A6  _toggle        rbit_0      0100
+clear_bank0    init        0000  clear_bit0     init        0000
+clear_ram      end_init    0008  intlevel0      intentry    0000
+intlevel1      intentry    0000  reset_vec      reset_vec   0000
+start          init        0000  used_btemp0    (abs)       0001
